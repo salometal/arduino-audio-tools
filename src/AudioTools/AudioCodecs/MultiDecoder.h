@@ -1,5 +1,7 @@
-
 #pragma once
+
+// Escludi le funzionalità HTTP se AUDIO_TOOLS_EXCLUDE_HTML è definito
+#ifndef AUDIO_TOOLS_EXCLUDE_HTML
 
 #include "AudioTools/AudioCodecs/AudioCodecsBase.h"
 #include "AudioTools/CoreAudio/AudioBasic/StrView.h"
@@ -152,3 +154,4 @@ class MultiDecoder : public AudioDecoder {
 };
 
 }  // namespace audio_tools
+#endif

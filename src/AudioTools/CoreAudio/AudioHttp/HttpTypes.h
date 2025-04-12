@@ -1,4 +1,7 @@
 #pragma once
+
+// Escludi le funzionalità HTTP se AUDIO_TOOLS_EXCLUDE_HTML è definito
+#ifndef AUDIO_TOOLS_EXCLUDE_HTML
 /** @brief supported http methods */
 enum MethodID {
   UNDEFINED,
@@ -12,3 +15,4 @@ enum MethodID {
   CONNECT,
   PATCH
 };
+#endif

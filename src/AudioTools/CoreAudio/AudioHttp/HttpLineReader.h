@@ -1,5 +1,8 @@
 #pragma once
 
+// Escludi le funzionalità HTTP se AUDIO_TOOLS_EXCLUDE_HTML è definito
+#ifndef AUDIO_TOOLS_EXCLUDE_HTML
+
 #include "AudioLogger.h"
 
 namespace audio_tools {
@@ -80,3 +83,4 @@ class HttpLineReader {
 };
 
 }  // namespace audio_tools
+#endif

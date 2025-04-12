@@ -1,5 +1,8 @@
 #pragma once
 
+// Escludi le funzionalità HTTP se AUDIO_TOOLS_EXCLUDE_HTML è definito
+#ifndef AUDIO_TOOLS_EXCLUDE_HTML
+
 #include "AudioToolsConfig.h"
 #include "AudioTools/CoreAudio/AudioBasic/Debouncer.h"
 #include "AudioTools/CoreAudio/AudioHttp/AudioHttp.h"
@@ -536,3 +539,4 @@ protected:
 };
 
 } // namespace audio_tools
+#endif

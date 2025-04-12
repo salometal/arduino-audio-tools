@@ -1,4 +1,7 @@
 #pragma once
+
+// Escludi le funzionalità HTTP se AUDIO_TOOLS_EXCLUDE_HTML è definito
+#ifndef AUDIO_TOOLS_EXCLUDE_HTML
 #include <stdlib.h>
 #include "AudioToolsConfig.h"
 #include "AudioTools/CoreAudio/AudioTypes.h"
@@ -111,3 +114,4 @@ class MetaDataOutput : public AudioOutput {
 
 
 }
+#endif

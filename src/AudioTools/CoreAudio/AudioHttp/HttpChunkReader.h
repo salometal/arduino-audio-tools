@@ -1,5 +1,8 @@
 #pragma once
 
+// Escludi le funzionalità HTTP se AUDIO_TOOLS_EXCLUDE_HTML è definito
+#ifndef AUDIO_TOOLS_EXCLUDE_HTML
+
 #include "HttpHeader.h"
 #include "HttpLineReader.h"
 
@@ -122,3 +125,4 @@ class HttpChunkReader : public HttpLineReader {
 };
 
 }  // namespace audio_tools
+#endif

@@ -1,4 +1,8 @@
 #pragma once
+
+// Escludi le funzionalità HTTP se AUDIO_TOOLS_EXCLUDE_HTML è definito
+#ifndef AUDIO_TOOLS_EXCLUDE_HTML
+
 #include <ctype.h> //isascii
 #include "AudioToolsConfig.h"
 #include "AbstractMetaData.h"
@@ -286,3 +290,4 @@ class ICYUrlSetup {
 };
 
 }  // namespace audio_tools
+#endif

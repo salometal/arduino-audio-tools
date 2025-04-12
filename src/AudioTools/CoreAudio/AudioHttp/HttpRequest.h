@@ -1,5 +1,8 @@
 #pragma once
 
+// Escludi le funzionalità HTTP se AUDIO_TOOLS_EXCLUDE_HTML è definito
+#ifndef AUDIO_TOOLS_EXCLUDE_HTML
+
 #include "AudioToolsConfig.h"
 #include "HttpChunkReader.h"
 #include "HttpHeader.h"
@@ -371,3 +374,4 @@ class HttpRequest : public BaseStream {
 
 }  // namespace audio_tools
 
+#endif

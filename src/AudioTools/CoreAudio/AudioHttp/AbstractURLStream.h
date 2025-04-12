@@ -1,5 +1,7 @@
 #pragma once
 
+#ifndef AUDIO_TOOLS_EXCLUDE_HTML
+
 #include "AudioTools/CoreAudio/BaseStream.h"
 #include "AudioTools/CoreAudio/AudioMetaData/AbstractMetaData.h" // for MetaDataType
 #include "HttpTypes.h"
@@ -74,5 +76,6 @@ class AbstractURLStream : public AudioStream {
 
 };
 
-
 }  // namespace audio_tools
+
+#endif // AUDIO_TOOLS_EXCLUDE_HTML

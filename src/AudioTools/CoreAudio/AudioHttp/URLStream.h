@@ -26,9 +26,14 @@ class URLStream : public AbstractURLStream {
  public:
   URLStream(int readBufferSize = DEFAULT_BUFFER_SIZE) {
     TRACED();
-    setReadBufferSize(readBufferSize);
+    setReadBufferSize(readBufferSize);  // Assicuriamoci che questa funzione sia sempre definita
   }
-  // Altri costruttori e metodi...
+
+  // Metodo per impostare la dimensione del buffer di lettura
+  void setReadBufferSize(int size) {
+    read_buffer_size = size;
+    read_buffer.resize(read_buffer_size);
+  }
 
  protected:
   HttpRequest request;
